@@ -1,3 +1,4 @@
+//---------------------------------------------------
 // BUCLES FOR -------------
 // USAR CUANDO ALGO SE REPITE X CANTIDAD DE VECES
 /*for (let i = 0; i <= 10; i++) {
@@ -30,7 +31,7 @@ for (let i = 0; i <=10; i++) {
 //     alert("el nombre del alumno " + i + " es: " + alumno + " y su promedio es: " + promedio);
 // }
 
-for (let i = 1; i <= 5; i++) {
+/*for (let i = 1; i <= 5; i++) {
 
     //nombre del alumno
     const alumno = prompt("ingrese el nombre del alumno");
@@ -48,4 +49,41 @@ for (let i = 1; i <= 5; i++) {
     promedio = promedio / 3
     
     alert("el nombre del alumno " + i + " es: " + alumno + " y su promedio es: " + promedio);
-}
+}*/
+
+// SENTENCIA BREAK se usa para salir del FOR cuando se encuentra cierto valor
+// SENTECIA CONTINUE ejecuta la actualizacion y sale y vuelve a la siguiente iteracion
+
+//------------------------------------------------------------
+// WHILE. Se cumple mientras la condicion sea verdadera. va con una condicion que sea verdadera o falsa
+//se puede ejecutar 0 veces
+//---------------------
+
+// let entrada = prompt("ingrese un dato");
+
+// while(entrada !== "ESC"){
+//     alert("el usuario ingreso: " + entrada);
+//     entrada = prompt("vuelva a ingresar un dato");
+// }
+// console.log("salgo del WHILE")
+
+// let i = 0;
+// while(i < 10){
+//     console.log(i);
+//     i++
+// }
+// console.log("salgo del while")
+
+//---------------------------------------------------
+// DO WHILE  48:40
+//-----------------------------------------------------
+// se puede ejecutar al menos 1 vez porque hace la comparacion al final y no al principio
+
+let i = 0;
+
+do {
+    console.log(i);
+    i = i + 1;
+} while (i < 10);
+
+console.log("salgo del do while")
