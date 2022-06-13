@@ -79,11 +79,46 @@ for (let i = 0; i <=10; i++) {
 //-----------------------------------------------------
 // se puede ejecutar al menos 1 vez porque hace la comparacion al final y no al principio
 
-let i = 0;
+// let i = 0;
 
-do {
-    console.log(i);
-    i = i + 1;
-} while (i < 10);
+// do {
+//     console.log(i);
+//     i = i + 1;
+// } while (i < 10);
 
-console.log("salgo del do while")
+// console.log("salgo del do while")
+
+//-------------------------
+// SWITCH
+//-------------------------
+// MULTIPLES condiciones sobre la misma variable
+
+let numero = parseInt(prompt("ingrese un numero"));
+
+// if( numero === 2) {
+//     console.log("el numero es igual a 2");
+// } else if(numero === 4) {
+//     console.log("el numero es igual a 4");
+// } else if(numero === 6) {
+//     console.log("el numero es igual a 6");
+// } else {
+//     console.log("el numero no es igual a 2, 4 o 6")
+// }
+switch(numero) {
+
+    case 2:
+        console.log("el numero es igual a 2");
+        break;
+
+    case 4:
+        console.log("el numero es igual a 4");
+        break;
+
+    case 6:
+        console.log("el numero es igual a 6");
+        break;
+
+    default:
+        console.log("el numero no es 2, 4 o 6");
+        break;
+}
