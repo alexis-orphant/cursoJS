@@ -63,10 +63,24 @@
 // }
 // console.log(calculadora);
 
-function calcularEdad(anioDeNaciomiento){
-    return 2022 - anioDeNaciomiento;
-}
-const anioIngresado = parseInt(prompt("ingrese su año de nacimiento"));
+// function calcularEdad(anioDeNaciomiento){
+//     return 2022 - anioDeNaciomiento;
+// }
+// const anioIngresado = parseInt(prompt("ingrese su año de nacimiento"));
 
-console.log(calcularEdad(anioIngresado))
-// min 1:06:00
+// console.log(calcularEdad(anioIngresado))
+
+// funciones anonimas (funcion sin nombre porque se asigna a una variable)
+// const suma = function (a, b) {return a + b}
+// const resta = function (a, b) {return a - b}
+// console.log( suma(5,20));
+// console.log( resta(20,5));
+// es igual a:
+// function suma(a, b){
+//     return a + b;
+// }
+
+// funciones flecha =>
+//const suma = (a, b) => {return a + b }
+//si es una funcion de una sola linea podemos evitar escribir el cuerpo
+//const resta = (a, b) => a - b;
