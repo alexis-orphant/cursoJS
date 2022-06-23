@@ -154,21 +154,21 @@
 // const persona1 = new Persona("Homero", 39, "Av. Siempreviva 742");
 // persona1.hablar();
 
-class Producto{
-    constructor(categoria, nombre, precio, stock){
-        this.categoria = categoria;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.stock = stock;
-    }
-    modificarStock(nuevoStock){
-        this.stock = nuevoStock
-    }
-}
+// class Producto{
+//     constructor(categoria, nombre, precio, stock){
+//         this.categoria = categoria;
+//         this.nombre = nombre;
+//         this.precio = precio;
+//         this.stock = stock;
+//     }
+//     modificarStock(nuevoStock){
+//         this.stock = nuevoStock
+//     }
+// }
 
-const producto = new Producto ("lacteos", "yogurt", 30, 1);
+// const producto = new Producto ("lacteos", "yogurt", 30, 1);
 
-console.log(producto.stock);
+// console.log(producto.stock);
 
-producto.modificarStock(10)
-console.log(producto.stock)
+// producto.modificarStock(10)
+// console.log(producto.stock)
