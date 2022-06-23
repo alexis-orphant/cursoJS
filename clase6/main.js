@@ -19,13 +19,33 @@
 // let resultado  = numeros[1] + numeros[2] 
 // console.log( resultado  ) // 5;
 
+// const alumnos =["gonzalo", "joaquin", "rodrigo"];
+// console.log(alumnos) imprime todos los valores del array
+//console.log(alumnos[1]) imprime el valor que esta en el indice 1 del array (joaquin). si el indice no esta en el array devuelve undefined
+
 // recorrido del array 
 // const numeros = [1, 2, 3, 4, 5];
 // for (let index = 0; index < 5; index++) {
 //     alert(numeros[index]);
 // }
 
-// METODOS Y PROPIEDADES 
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// for (let i = 0; i < 4; i++){
+//     console.log(alumnos[i])
+// }
+//recorre de atras para adelante
+// for (let i = 3; i >= 0; i--){
+//     console.log(alumnos[i])
+// }
+//console.log(alumnos.length) //cantidad de elementos del array
+
+//recorre todo el array sin que le indiquemos la cantidad
+// for (let i = 0; i < alumnos.length; i++){
+//     console.log(alumnos[i])
+// }
+
+
+// METODOS Y PROPIEDADES (arriba hay ejemplos con length)
 
 // length nos sirve para obtener el largo, es decir, para identificar cuántos elementos tiene
 // const miArray = ["marca", 3 ,"palabra"];
@@ -44,10 +64,19 @@
 // agrega el elemeto al final del array
 // const miArray = ["marca", 3, "palabra"]
 // miArray.push('otro elemento')
-
 // console.log(miArray.length) // ⇒ 4
 // console.log(miArray)
 // //["marca", 3, "palabra", “otro elemento”]
+
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// alumnos.push("camila")
+// alumnos.push("natalia")
+// alumnos.push("pablo")
+
+// for (let i = 0; i < alumnos.length; i++){
+//     console.log(alumnos[i])
+// }
+
 
 // unshift()
 //agrega el elemeto al inicio del array
@@ -57,12 +86,31 @@
 // console.log(miArray)
 // //[“otro elemento”, "marca", 3, "palabra"]
 
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// alumnos.unshift("camila")
+// alumnos.unshift("natalia")
+// alumnos.unshift("pablo") al ultimo elemento agregado lo pone primero en el array
+
+// for (let i = 0; i < alumnos.length; i++){
+//     console.log(alumnos[i])
+// }
+
+
 // QUITAR ELEMENTOS DEL ARRAY 
 //shift()
 //eliminale primer elemento del array
 // const nombres = ["Luis", "Ana", "Julia", "Juan"]
 // nombres.shift()
 // console.log(nombres) // ["Ana", "Julia", "Juan"]
+
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// console.log(alumnos)
+// alumnos.push("gaston")
+// console.log(alumnos)
+// alumnos.shift()
+// console.log(alumnos) //cuando elimino o agrego un elemento se reordenan los indices
+// alumnos.pop()
+// console.log(alumnos)
 
 // pop()
 // elimina el ultimo elemento del array 
@@ -76,6 +124,15 @@
 // const nombres = ['Rita', 'Pedro', 'Miguel', 'Ana', 'Vanesa'];
 // nombres.splice(1, 2)
 
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// console.log(alumnos);
+// alumnos.push("gaston");
+// alumnos.push("natalia");
+// console.log(alumnos);
+
+// alumnos.splice(2, 2);// el primero es el indice inicial y el segundo cuantos elimino contado el primer elemento que pusimos el indice
+// console.log(alumnos);
+
 // console.log(nombres)
 // // ['Rita', 'Ana', 'Vanesa']
 
@@ -87,6 +144,10 @@
 // console.log( nombres.join(“*”) ) 
 // // Luis*Ana*Julia
 
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// console.log(alumnos.join(" / ")) //lo agregado entre las comillas es como separa a los elementos de array (el espacio tambien cuenta)
+// console.log(alumnos.join("/")) //distinto al de arriba por los espacios
+
 // concat()
 //combinar dos Arrays en un único Array
 // const perros   = ["Pupy", “Ronnie”]
@@ -94,6 +155,12 @@
 // const mascotas = perros.concat(gatos)
 // console.log(mascotas)
 // // ["Pupy", “Ronnie”, "Mishi", “Garfield”, "Zuri"]
+//une 2 arrays
+const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+const nuevosAlumnos = ["camila", "natalia", "gaston"];
+const todosLosAlumnos = alumnos.concat(nuevosAlumnos); // el array entre () es el que se suma al que esta antes del .concat
+console.log(todosLosAlumnos)
+
 
 // slice()
 //El método slice devuelve una copia de una parte del Array dentro de un nuevo Array
