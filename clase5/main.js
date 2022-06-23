@@ -172,3 +172,5 @@
 
 // producto.modificarStock(10)
 // console.log(producto.stock)
+
+//fin
