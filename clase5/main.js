@@ -85,18 +85,18 @@
 //     }
 // }
 
-function Producto(categoria, nombre, precio, stock) {
+// function Producto(categoria, nombre, precio, stock) {
 
-    this.categoria = categoria;
-    this.nombre = nombre;
-    this.precio = precio;
-    this.stock = stock;
-    //despues del punto es el metodo y hay que usarlo para modificar la propiedades
-    //aca se modifica la propiedad de stock (es como asignar parametros en la funcion, funciona de manera parecida)
-    this.modificarStock = (nuevoStock) => {
-        this.stock = nuevoStock
-    }
-}
+//     this.categoria = categoria;
+//     this.nombre = nombre;
+//     this.precio = precio;
+//     this.stock = stock;
+//     //despues del punto es el metodo y hay que usarlo para modificar la propiedades
+//     //aca se modifica la propiedad de stock (es como asignar parametros en la funcion, funciona de manera parecida)
+//     this.modificarStock = (nuevoStock) => {
+//         this.stock = nuevoStock
+//     }
+// }
 //camibiar y mostrar stock
 // const producto = new Producto("carnes", "churrasco", 40, 1);
 // console.log("el stock actual es: " + producto.stock)
@@ -105,3 +105,70 @@ function Producto(categoria, nombre, precio, stock) {
 // producto.modificarStock(nuevoStock);
 
 // console.log("el nuevo stock es: " + producto.stock)
+
+
+// OPERADOR "IN" Y "FOR... IN"
+
+// IN
+// function Producto(categoria, nombre, precio, stock) {
+//     this.categoria = categoria;
+//     this.nombre = nombre;
+//     this.precio = precio;
+//     this.stock = stock;
+//     //despues del punto es el metodo y hay que usarlo para modificar la propiedades
+//     //aca se modifica la propiedad de stock (es como asignar parametros en la funcion, funciona de manera parecida)
+//     this.modificarStock = (nuevoStock) => {
+//         this.stock = nuevoStock
+//     }
+// }
+// const producto = new Producto ("lacteos", "yogurt", 30, 1);
+//si quiero verificar si el producto tiene la propiedad categoria
+// console.log("modificarStock" in producto);
+
+// FOR IN 
+//recore todos los nombres de metodos y propiedades y los asigna a la variable (prop en este caso)
+// for(const prop in producto){
+//     console.log(prop);
+// }
+
+//si quiero mostrar el valor que tiene la propiedad
+// for(const prop in producto){
+//     console.log(producto[prop]); //la ventaja de los [] frente al punto . si uso punto aca no muestra lo que queremos
+// }
+
+
+// CLASES 
+//es mas ordenado que lo anterios
+// class Persona{
+//     //funcion constructora
+//     constructor(nombre, edad, calle) {
+//         this.nombre = nombre;
+//         this.edad   = edad;
+//         this.calle  = calle;
+//     }
+//     //metodos
+//     hablar(){
+//         console.log("HOLA SOY "+ this.nombre);
+//     }
+// }
+// const persona1 = new Persona("Homero", 39, "Av. Siempreviva 742");
+// persona1.hablar();
+
+class Producto{
+    constructor(categoria, nombre, precio, stock){
+        this.categoria = categoria;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
+    modificarStock(nuevoStock){
+        this.stock = nuevoStock
+    }
+}
+
+const producto = new Producto ("lacteos", "yogurt", 30, 1);
+
+console.log(producto.stock);
+
+producto.modificarStock(10)
+console.log(producto.stock)
