@@ -156,10 +156,10 @@
 // console.log(mascotas)
 // // ["Pupy", “Ronnie”, "Mishi", “Garfield”, "Zuri"]
 //une 2 arrays
-const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
-const nuevosAlumnos = ["camila", "natalia", "gaston"];
-const todosLosAlumnos = alumnos.concat(nuevosAlumnos); // el array entre () es el que se suma al que esta antes del .concat
-console.log(todosLosAlumnos)
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// const nuevosAlumnos = ["camila", "natalia", "gaston"];
+// const todosLosAlumnos = alumnos.concat(nuevosAlumnos); // el array entre () es el que se suma al que esta antes del .concat
+// console.log(todosLosAlumnos)
 
 
 // slice()
@@ -167,18 +167,37 @@ console.log(todosLosAlumnos)
 // const nombres    = ['Rita', 'Pedro', 'Miguel', 'Ana', 'Vanesa'];
 // const masculinos = nombres.slice(1, 3); // Nuevo array desde la posición 1 a 3.
 // // masculinos contiene ['Pedro','Miguel']
+// funciona con el indice de los valores como el splice
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// const nuevosAlumnos = ["camila", "natalia", "gaston"];
+// const todosLosAlumnos = alumnos.concat(nuevosAlumnos);
+// console.log(todosLosAlumnos)
+// const copiaAlumnos = todosLosAlumnos.slice(2, 5);
+// console.log(copiaAlumnos)
+
 
 // indexOf()
 //El método indexOf() nos permite obtener el índice de un elemento en un array. Recibe por parámetro el elemento que queremos buscar en el array y, en caso de existir, nos retorna su índice. Si el elemento no existe nos retornará como valor: -1
 // const nombres = ['Rita', 'Pedro', 'Miguel', 'Ana', 'Vanesa'];
+// indexof - buscar a facundo
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// const nuevosAlumnos = ["camila", "natalia", "gaston"];
+// const todosLosAlumnos = alumnos.concat(nuevosAlumnos);
+// const indexFacundo = todosLosAlumnos.indexOf("facundo")
+// console.log(indexFacundo) // sale el numero 3 porque es en la posicion o indice que tiene facundo
 
 // console.log( nombres.indexOf('Rita') ) // ⇒ 0
 // console.log( nombres.indexOf('Ana') ) // ⇒ 3
-// console.log( nombres.indexOf('Julieta') ) // ⇒ -1
+// console.log( nombres.indexOf('Julieta') ) // ⇒ -1 porque no existe el valor indicado en el array
 
 // includes()
 //el método includes me permite saber si un elemento que recibo por parámetro existe o no dentro de un array, retornando un valor booleano en caso afirmativo o negativo:
 // const nombres = ['Rita', 'Pedro', 'Miguel', 'Ana', 'Vanesa']
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// const nuevosAlumnos = ["camila", "natalia", "gaston"];
+// const todosLosAlumnos = alumnos.concat(nuevosAlumnos);
+// console.log(todosLosAlumnos.includes("facundo")) // es true porque el valor existe en el array
+
 
 // console.log( nombres.includes('Rita') ) // ⇒ true
 // console.log( nombres.includes('Miguel') ) // ⇒ true
@@ -191,6 +210,23 @@ console.log(todosLosAlumnos)
 // console.log( nombres ) 
 // // ⇒ ['Vanesa', 'Ana','Miguel', 'Pedro','Rita']
 //Cuidado porque el método reverse es destructivo, o sea que modifica el array original,
+// const alumnos =["gonzalo", "joaquin", "rodrigo", "facundo"];
+// const nuevosAlumnos = ["camila", "natalia", "gaston"];
+// const todosLosAlumnos = alumnos.concat(nuevosAlumnos);
+// console.log(todosLosAlumnos)X
+// todosLosAlumnos.reverse()
+// console.log(todosLosAlumnos)
+
+
+//cargar el ARRAY con entradas
+// const libros = []; 
+// let nuevoLibro = prompt("ingrese nombre del libro");
+
+// while (nuevoLibro !== "salir"){
+//     libros.push(nuevoLibro);
+//     nuevoLibro = prompt("ingrese otro libro")
+// }
+// console.log(libros);
 
 // ARRAYS DE OBJETOS
 //Los array pueden usarse para almacenar objetos personalizados
@@ -198,6 +234,20 @@ console.log(todosLosAlumnos)
 // const objeto1 = { id: 1, producto: "Arroz" };
 // const array   = [objeto1, { id: 2, producto: "Fideo" }];
 // array.push({ id: 3, producto: "Pan" });
+// const productos = []
+
+// productos.push({
+//     nombre : "arroz",
+//     precio : 20,
+//     stock : 5,
+// })
+// productos.push({
+//     nombre : "fideos",
+//     precio : 50,
+//     stock: 10,
+// })
+// console.log(productos);
+
 
 
 //FOR...OF
@@ -229,3 +279,5 @@ console.log(todosLosAlumnos)
 // //Iteramos el array con for...of para modificarlos a todos
 // for (const producto of productos)
 //     producto.sumaIva();
+
+// https://drive.google.com/drive/folders/1k1H1mj2KvX_UWKlYvGl5vp2WeMsVHHxd
