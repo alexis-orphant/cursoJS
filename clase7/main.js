@@ -31,14 +31,25 @@
 
 // otro ejemplo
 
-function calcular(impuesto) {
-    return (precioProducto) => precioProducto * impuesto;
-};
+// function calcular(impuesto) {
+//     return (precioProducto) => precioProducto * impuesto;
+// };
 
-let calcularImpuestoIVA = calcular(0.21);
-let calcularImpuestoDelDiez = calcular(0.10);
-let calcularImpuestoDelQuince = calcular(0.15);
+// let calcularImpuestoIVA = calcular(0.21);
+// let calcularImpuestoDelDiez = calcular(0.10);
+// let calcularImpuestoDelQuince = calcular(0.15);
 
-console.log(calcularImpuestoIVA(50));
-console.log(calcularImpuestoDelDiez(50));
-console.log(calcularImpuestoDelQuince(50));
+// console.log(calcularImpuestoIVA(50));
+// console.log(calcularImpuestoDelDiez(50));
+// console.log(calcularImpuestoDelQuince(50));
+
+// RECIBIR FUNCIONES POR PARÁMETRO
+
+// Significa escribir funciones que puedan recibir funciones por parámetro.
+//Empecemos con un ejemplo: 
+
+// function porCadaUno(arr, fn) {
+//     for (const el of arr) {
+//         fn(el)
+//     }
+// }
