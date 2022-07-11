@@ -327,4 +327,113 @@
 // const libros = JSON.parse(librosJson);
 // console.log(libros[1].nombre)
 
-min 01:00:00
+const libros = [
+    {
+        nombre: "Libro 1",
+        precio: 200,
+        cantidadDePaginas: 20,
+    },
+    {
+        nombre: "Libro 2",
+        precio: 100,
+        cantidadDePaginas: 10,
+    },
+    {
+        nombre: "Libro 3",
+        precio: 600,
+        cantidadDePaginas: 15,
+    },
+];
+
+// Agregamos los objetos al HTML
+const listaLibros = document.getElementById("listaLibros");
+
+libros.forEach( (libro) => {
+
+    // Agregar libro a la lista
+    const li = document.createElement("li");
+
+    // Agregamos el nombre
+    const pNombre = document.createElement("p");
+    pNombre.innerHTML = `<strong>Nombre:</strong> ${libro.nombre}`;
+
+    // Agregamos el precio
+    const pPrecio = document.createElement("p");
+    pPrecio.innerHTML = `<strong>Precio:</strong> $${libro.precio}`;
+
+    // Agregamos el botón para agregar al carrito
+    const botonCarrito = document.createElement("button");
+    botonCarrito.innerText = "Agregar al carrito";
+
+    // Evento de click del boton
+    botonCarrito.addEventListener("click", () => {
+
+        // Obtengo el JSON de localStorage, y si existe lo parseo para obtener los elementos que tenía previamente
+        let carrito = [];
+        const carritoJson = localStorage.getItem("carrito");
+
+        if(carritoJson) {
+            carrito = JSON.parse(carritoJson);
+        }
+
+        // Busco si hay un libro en el carrito que tenga el mismo nombre que el libro que estoy agregando
+        const indiceProductoEncontrado = carrito.findIndex( (libroCarrito) => {
+            return libroCarrito.nombre === libro.nombre;
+        });
+
+        // Si el libro no existe en el carrito
+        if(indiceProductoEncontrado === -1) {
+            libro.cantidad = 1;
+            carrito.push(libro);
+
+        } else { // El libro existe en el carrito
+
+            carrito[indiceProductoEncontrado].cantidad += 1;
+
+        }
+
+        // Guardo carrito en el localStorage
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+
+        // Actualizar HTML de productos
+        mostrarLibrosEnElCarrito();
+
+    });
+
+    li.append(pNombre, pPrecio, botonCarrito);
+
+    // Agregamos el elemento a la lista
+    listaLibros.append(li);
+
+});
+
+function mostrarLibrosEnElCarrito () {
+
+    const ulCarrito = document.getElementById("librosEnElCarrito");
+    ulCarrito.innerHTML = "";
+
+    const carritoJson = localStorage.getItem("carrito");
+    const carrito = JSON.parse(carritoJson);
+
+    carrito.forEach( (libro) => {
+
+        const li = document.createElement("li");
+
+        // Creo elementos
+        const pNombre = document.createElement("p");
+        pNombre.innerHTML = `<strong>Nombre:</strong> ${libro.nombre}`;
+
+        const pPrecio = document.createElement("p");
+        pPrecio.innerHTML = `<strong>Precio:</strong> $${libro.precio}`;
+
+        const pCantidad = document.createElement("p");
+        pCantidad.innerHTML = `<strong>Cantidad:</strong> ${libro.cantidad}`;
+
+        li.append(pNombre, pPrecio, pCantidad);
+
+        // Agregar li a la lista
+        ulCarrito.append(li);
+    });
+}
+
+mostrarLibrosEnElCarrito();
