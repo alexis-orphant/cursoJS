@@ -181,3 +181,86 @@ const usuario1 = {
 
 // ALIAS
 // Declarar la variable con un nombre alternativo tras haber desestructurado el objeto.
+
+// Esto lo hacemos simplemente con el operador : luego del nombre de la propiedad.
+
+// const item = {
+//   item_id: 432,
+//   product_name: "Some product",
+//   price_per_unit: 5600
+// }
+
+// const {
+//   item_id: id,
+//   product_name: nombre,
+//   price_per_unit: precio
+// } = item
+
+// console.log(id) // 432
+// console.log(nombre) // "Some product"
+// console.log(precio) // 5600
+
+// Desestructuración en parámetros
+
+// Si en una función recibimos objetos por parámetros, también es posible desestructurarlos directamente en el llamado, definiendo esto al declarar la función. 
+
+// const producto = {
+//   id: 10,
+//   nombre: "Curso Javascript",
+//   precio: 12500
+// }
+
+// const desestructurar = (item) => {
+//   // desestructurando dentro del bloque
+//   const {id, nombre} = item
+//   console.log(id, nombre)
+// }
+
+// desestructurar(producto) // 10 Curso Javascript
+
+// Sabiendo qué es lo que vamos a recibir y qué necesitamos desestructurar, podemos traducir esto con la siguiente lógica:
+
+// desestructurando lo que reciba por parámetro
+// const desestructurar = ( {id, nombre} ) => {
+//   console.log(id, nombre)
+// }
+
+// desestructurar(producto) // 10 Curso Javascript
+
+// window.addEventListener('click', ( {x, y} ) => {
+//   console.log(x, y)
+// })
+
+
+// DESESTRUCTURACIÓN DE ARRAYS
+
+// No funciona aquí la coincidencia por nombres, sino que se toman los valores según la posición. Las dos primeras variables que declaramos tomarán los valores de los dos primeros elementos del array. 
+// Si queremos acceder a otras posiciones, o mejor dicho omitir las primeras, podemos hacerlo dejando espacios vacíos con comas:
+
+// const nombres = ["Juan", "Julieta", "Carlos", "Mariela"]
+
+// // omito las dos primeras posiciones
+// const [,, a, b] = nombres
+
+// console.log(a) // "Carlos"
+// console.log(b) // "Mariela"
+
+
+// SPREAD
+// Spread ( … ) es una herramienta que nos permite, como su nombre indica, desparramar un array u objeto. En otras palabras, cambiar la forma en la que presentamos este array u objeto. 
+
+// SPREAD DE ARRAYS
+
+// Si paso un array por parámetro a alguna función, ésta recibe el array entero como tal
+// const nombres = ["Juan", "Julieta", "Carlos", "Mariela"]
+// console.log(nombres) // ["Juan", "Julieta", "Carlos", "Mariela"]
+
+// Si en cambio enviamos un spread del array, veremos lo siguiente:
+// const nombres = ["Juan", "Julieta", "Carlos", "Mariela"]
+
+// // spread ... del array
+// console.log(...nombres) // Juan Julieta Carlos Mariela
+
+// // equivalente a:
+// console.log("Juan", "Julieta", "Carlo", "Mariela")
+
